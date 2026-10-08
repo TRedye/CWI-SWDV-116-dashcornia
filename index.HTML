@@ -6,19 +6,26 @@
     <meta name="description" content="Dash's Car Rentals">
     <title>Dash's Car Rentals</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="Body-section">
     <div class="container">
         <section class="hero-section">
             <header class="navbar">
-            <h1 class="logo">Dash's Car Rentals</h1>
-            <nav class="nav-links">
-                <a href="cars.html">Cars</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+                <h1 class="logo">Dash's Car Rentals</h1>
+
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+                <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </label>
+
+                <nav class="nav-links">
+                    <a href="cars.html"><i class="fa fa-car"></i> Cars</a>
+                    <a href="testimonials.html"><i class="fa fa-comments"></i> Testimonials</a>
+                    <a href="about.html"><i class="fa fa-info-circle"></i> About</a>
+                    <a href="contact.html"><i class="fa fa-envelope"></i> Contact</a>
+                </nav>
+            </header>
         </section>
     </div>
         <h1>Featured Cars</h1>

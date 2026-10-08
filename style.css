@@ -47,6 +47,7 @@ main p {
 
 }
 
+/* Navbar base (uniform across all pages) */
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -62,6 +63,63 @@ main p {
     box-sizing: border-box;
     top: 0;
     left: 0;
+    z-index: 10;
+}
+
+/* Hide the checkbox itself */
+.nav-toggle-checkbox {
+    display: none;
+}
+
+/* Label styled as toggle button (hidden on desktop) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.75rem;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links a i {
+    margin-right: 6px;
+}
+
+/* ≤600px: collapse to hidden vertical menu, toggled by checkbox */
+@media (max-width: 600px) {
+    .navbar {
+        column-gap: 0;
+        row-gap: 10px;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+
+    /* Show menu when checkbox is checked */
+    .nav-toggle-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
 }
 
 .logo {
